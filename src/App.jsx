@@ -5,11 +5,11 @@ import Header from './components/Header';
 import TopBanner from './components/TopBanner';
 import Navigation from './components/Navigation';
 import MainContent from './components/MainContent';
-import Statistics from './components/Statistics';
-import KeyPeople from './components/KeyPeople';
-import NewsSection from './components/NewsSection';
+import GreatPersonalities from './components/GreatPersonalities';
+import NotificationsSection from './components/NotificationsSection';
+import OfficialCarousel from './components/OfficialCarousel';
+import OfficersStaff from './components/OfficersStaff';
 import Footer from './components/Footer';
-import NewsGallery from './components/NewsGallery';
 
 const App = () => {
   return (
@@ -18,10 +18,10 @@ const App = () => {
       <TopBanner />
       <Navigation />
       <MainContent />
-      <Statistics />
-      <KeyPeople />
-      <NewsGallery />
-      <NewsSection />
+      <GreatPersonalities />
+      <NotificationsSection />
+      <OfficialCarousel />
+      <OfficersStaff />
       <Footer />
     </div>
   );
