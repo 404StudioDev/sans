@@ -34,11 +34,11 @@ const OfficialCarousel = () => {
 
   return (
     <section className="bg-[#8B4513] py-6">
-      <div className="flex justify-center items-center h-[420px]">
+      <div className="flex justify-center items-center h-[450px]">
 
         {/* Left Photo Frame */}
-        <div className="w-[160px] bg-[#f5e6d3] rounded-md shadow-md border-2 border-white p-4 flex flex-col items-center mr-4">
-          <div className="w-[100px] h-[130px] bg-gray-300 rounded-md overflow-hidden">
+        <div className="w-[180px] bg-[#f5e6d3] rounded-md shadow-lg border-2 border-white p-4 flex flex-col items-center mr-4">
+          <div className="w-[120px] h-[150px] bg-gray-300 rounded-md overflow-hidden shadow-md">
             <img
               src=""
               alt="Left"
@@ -50,7 +50,7 @@ const OfficialCarousel = () => {
         </div>
 
         {/* Center Image */}
-        <div className="w-[60%] h-[85%] bg-white rounded-lg overflow-hidden border-4 border-gray-200 shadow-lg flex items-center justify-center">
+        <div className="w-[60%] h-[90%] bg-white rounded-lg overflow-hidden border-4 border-gray-200 shadow-2xl flex items-center justify-center">
           {allImages[currentSlide] ? (
             <img
               src={allImages[currentSlide]}
@@ -63,8 +63,8 @@ const OfficialCarousel = () => {
         </div>
 
         {/* Right Photo Frame */}
-        <div className="w-[180px] bg-[#f5e6d3] rounded-md shadow-md border-2 border-white p-4 flex flex-col items-center ml-4">
-          <div className="w-[100px] h-[130px] bg-gray-300 rounded-md overflow-hidden">
+        <div className="w-[180px] bg-[#f5e6d3] rounded-md shadow-lg border-2 border-white p-4 flex flex-col items-center ml-4">
+          <div className="w-[120px] h-[150px] bg-gray-300 rounded-md overflow-hidden shadow-md">
             <img
               src=""
               alt="Right"
