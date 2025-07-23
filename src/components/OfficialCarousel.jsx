@@ -6,7 +6,7 @@ const OfficialCarousel = () => {
   const slides = [
     {
       id: 1,
-      images: ['', '', '', ''], // Add your image URLs (png/jpg/webp) here
+      images: ['', '', '', ''], // Add your image URLs here
     },
     {
       id: 2,
@@ -33,41 +33,65 @@ const OfficialCarousel = () => {
   const currentImages = slides[currentSlide].images;
 
   return (
-    <section className="py-8 bg-[#8B4513] relative">
-      <div className="w-full flex justify-center items-center">
-        <div className="relative bg-[#f5e6d3] w-[90%] md:w-[70%] rounded-xl p-6 shadow-xl">
-          
-          {/* Center Carousel with 4 Images */}
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-            {currentImages.map((img, index) => (
-              <div
-                key={index}
-                className="w-full h-48 bg-white rounded-lg overflow-hidden flex items-center justify-center border-2 border-gray-300"
-              >
-                {img ? (
-                  <img
-                    src={img}
-                    alt={`Slide ${currentSlide + 1} - Img ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <span className="text-gray-400">Image {index + 1}</span>
-                )}
-              </div>
-            ))}
+    <section className="bg-[#4e1e0c] py-6">
+      <div className="max-w-[1300px] mx-auto px-4">
+        <div className="grid grid-cols-3 gap-4 items-center">
+
+          {/* Left Static Panel */}
+          <div className="bg-[#f5e6d3] text-center rounded-lg py-6 px-4">
+            <img
+              src="/your-left-image.jpg" // Replace with your actual image path
+              alt="Left"
+              className="w-full h-60 object-contain mx-auto"
+            />
+            <h3 className="text-lg font-bold text-[#4e1e0c] mt-4">Heading Goes Here</h3>
+            <p className="text-[#4e1e0c] text-sm">Text Goes Here</p>
           </div>
 
-          {/* Dots */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 mt-6">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full border border-white ${
-                  currentSlide === index ? 'bg-white' : 'bg-transparent'
-                }`}
-              />
-            ))}
+          {/* Center Carousel Panel */}
+          <div className="bg-white h-full rounded-lg shadow-lg border-4 border-[#f5e6d3] p-4">
+            <div className="grid grid-cols-2 gap-4">
+              {currentImages.map((img, index) => (
+                <div
+                  key={index}
+                  className="w-full h-40 bg-gray-100 rounded-md flex items-center justify-center overflow-hidden border"
+                >
+                  {img ? (
+                    <img
+                      src={img}
+                      alt={`Slide ${currentSlide + 1} - Image ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-gray-400 text-sm">Image {index + 1}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Dots */}
+            <div className="flex justify-center mt-4 space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full border border-white ${
+                    currentSlide === index ? 'bg-white' : 'bg-transparent'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Right Static Panel */}
+          <div className="bg-[#f5e6d3] text-center rounded-lg py-6 px-4">
+            <img
+              src="/your-right-image.jpg" // Replace with your actual image path
+              alt="Right"
+              className="w-full h-60 object-contain mx-auto"
+            />
+            <h3 className="text-lg font-bold text-[#4e1e0c] mt-4">Heading Goes Here</h3>
+            <p className="text-[#4e1e0c] text-sm">Text Goes Here</p>
           </div>
         </div>
       </div>
