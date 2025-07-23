@@ -48,66 +48,67 @@ const OfficialCarousel = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-    <section className="py-8 bg-[#8B4513]">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          {/* Carousel Container */}
-          <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 min-h-[300px]">
-              
-              {/* Left Image */}
-              <div className="bg-white p-6 flex flex-col items-center justify-center">
-                <div className="w-40 h-48 bg-gray-200 rounded-lg overflow-hidden mb-4 shadow-md">
-                  <img
-                    src={currentSlideData.leftImage}
-                    alt="Official"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-bold text-sm text-[#8B4513] mb-2">{currentSlideData.leftHeading}</h3>
-                  <p className="text-xs text-gray-600">{currentSlideData.leftText}</p>
-                </div>
-              </div>
-
-              {/* Center Content */}
-              <div className="bg-gray-100 p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-64 h-40 bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-gray-200">
-                    <span className="text-gray-400 text-lg font-medium">Content Area</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Image */}
-              <div className="bg-white p-6 flex flex-col items-center justify-center">
-                <div className="w-40 h-48 bg-gray-200 rounded-lg overflow-hidden mb-4 shadow-md">
-                  <img
-                    src={currentSlideData.rightImage}
-                    alt="Official"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-bold text-sm text-[#8B4513] mb-2">{currentSlideData.rightHeading}</h3>
-                  <p className="text-xs text-gray-600">{currentSlideData.rightText}</p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index ? 'bg-[#8B4513]' : 'bg-gray-300'
-                  }`}
+    <section className="py-0 bg-[#8B4513] relative">
+      <div className="w-full px-0">
+        {/* Carousel Container - Full Width */}
+        <div className="relative w-full">
+          <div className="grid grid-cols-3 gap-0 h-[420px]">
+            
+            {/* Left Image Panel */}
+            <div className="bg-[#f5e6d3] flex flex-col items-center justify-center p-8 border-r-4 border-[#8B4513]">
+              <div className="w-48 h-64 bg-white rounded-lg overflow-hidden shadow-lg border-4 border-white">
+                <img
+                  src={currentSlideData.leftImage}
+                  alt="Official"
+                  className="w-full h-full object-cover"
                 />
-              ))}
+              </div>
+              <div className="text-center mt-6">
+                <h3 className="font-bold text-lg text-[#8B4513] mb-2">{currentSlideData.leftHeading}</h3>
+                <p className="text-sm text-gray-700">{currentSlideData.leftText}</p>
+              </div>
             </div>
+
+            {/* Center Content Panel */}
+            <div className="bg-[#f5e6d3] flex items-center justify-center p-12 relative">
+              <div className="w-full h-full bg-white rounded-lg shadow-inner flex items-center justify-center border-4 border-gray-200">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                  <span className="text-gray-500 text-xl font-medium">Content Area</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Image Panel */}
+            <div className="bg-[#f5e6d3] flex flex-col items-center justify-center p-8 border-l-4 border-[#8B4513]">
+              <div className="w-48 h-64 bg-white rounded-lg overflow-hidden shadow-lg border-4 border-white">
+                <img
+                  src={currentSlideData.rightImage}
+                  alt="Official"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="text-center mt-6">
+                <h3 className="font-bold text-lg text-[#8B4513] mb-2">{currentSlideData.rightHeading}</h3>
+                <p className="text-sm text-gray-700">{currentSlideData.rightText}</p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Navigation Dots - Positioned at bottom center */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-4 h-4 rounded-full transition-all duration-300 border-2 border-white ${
+                  currentSlide === index 
+                    ? 'bg-white' 
+                    : 'bg-transparent hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
