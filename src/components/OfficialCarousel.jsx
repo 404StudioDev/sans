@@ -63,7 +63,7 @@ const OfficialCarousel = () => {
         </div>
 
         {/* Right Photo Frame */}
-        <div className="w-[160px] bg-[#f5e6d3] rounded-md shadow-md border-2 border-white p-4 flex flex-col items-center ml-4">
+        <div className="w-[180px] bg-[#f5e6d3] rounded-md shadow-md border-2 border-white p-4 flex flex-col items-center ml-4">
           <div className="w-[100px] h-[130px] bg-gray-300 rounded-md overflow-hidden">
             <img
               src=""
