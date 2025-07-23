@@ -26,21 +26,21 @@ const NotificationsSection = () => {
   ];
 
   return (
-    <section className="py-6" style={{ background: 'linear-gradient(to bottom, #f5e6d3, #e8d5c4)' }}>
+    <section className="py-8" style={{ background: 'linear-gradient(to bottom, #f5e6d3, #e8d5c4)' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Notifications Box */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-[#8B4513]">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-[#8B4513]">
             {/* Header */}
-            <div className="bg-[#8B4513] text-white py-3 px-6">
-              <h2 className="text-lg font-bold text-center">Notifications</h2>
+            <div className="bg-[#8B4513] text-white py-4 px-6">
+              <h2 className="text-xl font-bold text-center">Notifications</h2>
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6" style={{ background: '#f5e6d3' }}>
               <div className="space-y-4">
                 {notifications.map((notification) => (
-                  <div key={notification.id} className="flex items-start space-x-3 pb-3 border-b border-gray-200 last:border-b-0">
+                  <div key={notification.id} className="flex items-start space-x-3 pb-3 border-b border-[#8B4513]/20 last:border-b-0">
                     <div className="w-2 h-2 bg-[#8B4513] rounded-full mt-2 flex-shrink-0"></div>
                     <div className="flex-1">
                       <p className="text-gray-800 text-sm leading-relaxed mb-2">
