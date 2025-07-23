@@ -102,11 +102,11 @@ const OfficialCarousel = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={w-4 h-4 rounded-full transition-all duration-300 border-2 border-white ${
+                className={`w-4 h-4 rounded-full transition-all duration-300 border-2 border-white ${
                   currentSlide === index 
                     ? 'bg-white' 
                     : 'bg-transparent hover:bg-white/50'
-                }}
+                }`}
               />
             ))}
           </div>
