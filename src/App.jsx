@@ -15,10 +15,13 @@ const App = () => {
       <Header />
       <TopBanner />
       <Navigation />
+       <OfficialCarousel />
+      <OfficersStaff />
       <GreatPersonalities />
       <NotificationsSection />
-      <OfficialCarousel />
-      <OfficersStaff />
+      
+     
+      
     </div>
   );
 };
