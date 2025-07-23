@@ -34,7 +34,8 @@ const OfficialCarousel = () => {
 
   return (
     <section className="bg-[#8B4513] py-6">
-      <div className="flex justify-center items-center h-[450px]">
+      {/* ↓↓↓ Shift content upward by applying negative margin-top ↓↓↓ */}
+      <div className="flex justify-center items-center h-[450px] -mt-6">
 
         {/* Left Photo Frame */}
         <div className="w-[180px] bg-[#f5e6d3] rounded-md shadow-lg border-2 border-white p-4 flex flex-col items-center mr-4">
